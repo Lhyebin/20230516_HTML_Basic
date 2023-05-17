@@ -5,45 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>요소의 가로배치 felx</title>
+    <title>float</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/layout01.css">
+    <link rel="stylesheet" href="../css/layout02.css">
 </head>
 
 <body>
-    <h1 class="tit">요소의 가로배치 felx <i class="xi-close"></i></h1>
+    <h1 class="tit">float : 요소를 가로배치하는 옛날 방법</h1>
 
-    <h2>case01 - 가로배치 기본</h2>
-    <div class="container case01">
+    <h2>case01 - float 기본 가로배치</h2>
+    <div class="case01 container clearfix">
+        <div class="itm">01</div>
+        <div class="itm">02</div>
+        <!-- <p style="clear:both"></p>
+         clear both 는 float 사용할때만 가능하지만 사용잘 안함 왜냐면 빈박스 생기기도하고 스타일을 html에 주는방법은 좋지않기때문 -->
+    </div>
+
+    <h2>case02 - float 오른쪽 배치</h2>
+    <div class="case02 container clearfix">
         <div class="itm">01</div>
         <div class="itm">02</div>
     </div>
 
-    <h2>case02 - 양끝으로 배치01</h2>
-    <div class="container case02">
+    <h2>case03 - float 가운데 배치</h2>
+    <div class="case03 container">
         <div class="itm">01</div>
         <div class="itm">02</div>
     </div>
 
-    <h2>case03 - 양끝으로 배치02</h2>
-    <div class="container case03">
-        <div class="itm">01</div>
+    <h2 class="stitle">case04 - float 양끝 배치 <i class="xi-arrow-right"></i></h2>
+    <div class="case04 container clearfix">
+        <div class="itm left">01</div>
         <div class="itm right">02</div>
-        <div class="itm right2">03</div>
     </div>
 
-    <h2>case04 - 중앙배치</h2>
-    <div class="container case04">
-        <div class="itm">01</div>
-        <div class="itm right">02</div>
-        <div class="itm right2">03</div>
-    </div>
 
     <h2>실습 예시 01</h2>
 
     <div class="top_bar">
-        <div class="inner">
+        <div class="inner clearfix">
             <div class="slogan">
                 Lorem ipsum dolor sit.
              </div>
@@ -55,19 +56,21 @@
         </div>
     </div>
     <header id="header">
-        <div class="inner">
+        <div class="inner clearfix">
             <h1>LOGO</h1>
-            <nav class="gnb">
-                <ul> 
-                    <li><a href="">브랜드 스토리</a></li>
-                    <li><a href="">메뉴소개</a></li>
-                    <li><a href="">매장안내</a></li>
-                    <li><a href="">창업안내</a></li>
-                    <li><a href="">고객지원</a></li>
-                 <!-- 아래 공식 ul>li*4>a{menue0$} -->
-                </ul>
-            </nav>
-            <div class="right">010-3598-8175</div>
+            <div class="service">
+                <nav class="gnb">
+                    <ul> 
+                        <li><a href="">menu01</a></li>
+                        <li><a href="">menu02</a></li>
+                        <li><a href="">menu03</a></li>
+                        <li><a href="">menu04</a></li>
+                     <!-- 위 공식 ul>li*4>a{menue0$} -->
+                    </ul>
+                </nav>
+                <div class="right">010-3598-8175</div>
+            </div>
+
         </div>
     </header>
 
@@ -87,8 +90,6 @@
         </div>
 
     </section>
-
-
 
 </body>
 

@@ -1,0 +1,45 @@
+body {
+    height: 200vh;
+}
+
+img {
+    max-width: 100%;
+    /* 이미지를 보는 화면에 100%로 꽉차게 설정할때 + 반응형 가능 */
+}
+
+.bg00 {
+    height: 400px;
+    background: url(../images/mainvisual03.jpg) no-repeat fixed center center/cover;
+    
+
+}
+
+.bg01 {
+    height: 500px;
+    background-image: url(../images/grafflogo.png);
+    background-repeat: no-repeat;
+    /* background-position: 100px 100px; */
+    /* X축 Y축 순서로 주는 픽셀 사이즈대로 위치 이동 가능*/
+    background-position: center center;
+}
+
+.bg02 {
+    height: 400px;
+    background-image: url(../images/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* 스크롤 올리면 이미지가 겹치면서 다음 이미지 나오게끔 하는 기능 */
+}
+
+.bg03 {
+    filter: grayscale(1);
+    /* 스크롤 올리면 이미지가 겹치면서 다음 이미지 전 이미지가 그레이 색상을 변하는 기능 */
+    height: 400px;
+    background-image: url(../images/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}

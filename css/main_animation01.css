@@ -1,0 +1,49 @@
+/* <옆으로 넘겨지는 자동차 슬라이드 누끼컷 만들기> */
+#main_visual {
+    position: relative;
+    height: 900px;
+    background: url(../images/main_kv_car_bg_w.jpg) no-repeat center center/cover;
+}
+
+#main_visual .num {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100%, 0);
+    font-size: 50px;
+}
+
+/* <다음페이지 차모델 변경되면서 슬라이드될때마다 차 이름 같이 변경하기> */
+#main_visual .model {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    margin: 0 0 0 585px;
+    transform: translate(-100%, 0);
+    font-size: 50px;
+}
+
+
+#main_visual figure {
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+}
+
+#main_visual .slogan {
+    top: 200px;
+}
+
+#main_visual figure .car {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(90%, -50%);
+    transition: 0.7s 0.5s;
+    /* -> 애니메이션 줄때 사용하는 용어 : 트렌디샨 */
+}
+
+#main_visual figure.on .car {
+    transform: translate(-50%, -50%);
+}

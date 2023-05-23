@@ -1,0 +1,55 @@
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 화면의 센터 정렬 공식 */
+    background: rgb(223, 214, 212);
+
+    width: 300px;
+    z-index: 1;
+    /* 제일 처음꺼가 제일 위로 나오게 하는법 */
+}
+
+
+/* <.popup{}에서 만든 박스에 이미지를 꽉차게 넣는방법> */
+img {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* <.popup{}에서 만든 박스에 넣어진 이미지 위에 닫는 버튼 오른쪽 하단에 노출> */
+.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /* top: 0;
+    left: 0;
+    /* left right 좌표 안주면 왼쪽 정렬되기때문에
+    박스안에 버튼 넣으려면 각각 좌표 줘야함
+    -> 팝업에 position: absolute가 있기때문에 포지션이 박스 이미지로 기준으로 됨 */
+    z-index: 999;
+}
+
+
+.popup2 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+
+    width: 300px;
+    z-index: 1;
+}
+
+.popup3 {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+
+    width: 300px;
+}

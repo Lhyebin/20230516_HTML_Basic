@@ -1,0 +1,299 @@
+h1.tit {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+/* <1. 박스 가운데 텍스트 만들기> */
+.sec {
+    padding: 100px;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: yellow;
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+
+.case01 {
+    position: relative;
+}
+
+.case01 .itm {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.case02 {
+    position: relative;
+}
+
+.case02 .itm {
+    position: absolute;
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    inset: 0 0 0 0;
+    /* <display를 사용하여 요소를 가운데 두기> */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.case03 {
+    position: relative;
+}
+
+.case03 .itm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -600px;
+    transform: translate(0, -50%);
+}
+
+
+.case04 {
+    position: relative;
+}
+
+.case04 .itm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translate(-100%, -50%);
+}
+
+
+/* <실습> */
+.event {
+    background: tomato;
+}
+
+.event .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* <이미지 가로나열> */
+.event .con {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+/* <이미지가 차지하는 비율에 felx 1 : 1칸씩 차지한다 , 2 : 2칸씩 차지한다> */
+.event .con figure {
+    position: relative;
+    /* -> 카트가 이미지 옆에 하나씩 노출 */
+    flex: 1;
+    overflow: hidden;
+    /* -> btn밖에있는 것들을 없애라 */
+}
+
+/* <cart 아이콘 사이즈와 겉배경 동그라미 만들기> */
+.event .con figure .btn {
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    transition: 0.5s;
+}
+
+.event .con figure .btn i {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+/* <이미지에 커서 올라가면 버튼:카트 가 보이게 하기> */
+.event .con figure:hover .btn {
+    bottom: 30px;
+}
+
+.content {
+    background: #fff;
+}
+
+.content .con {
+    gap: 30px;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content .con figure {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* <이미지에 커서 올리면 파란배경으로 바뀌면서 흰글씨 보이게 하는방법> */
+.content figure .cover {
+    position: absolute;
+    inset: 0 auto auto 100%;
+    /* background: rgb(0, 0, 255);
+    opacity: 0.5; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* -> column : 아래쪽 방향으로 이동 */
+
+    background: rgba(0, 0, 255, 0.8);
+    /* -> rgba : 배경을 투명하게하면서 글자를 깨끗하게 쓸떄 */
+    color: #ffffff;
+    padding: 50px 30px;
+
+    transition: 0.5s;
+}
+
+.content .cover a {
+    background: #333;
+    padding: 5px 10px;
+    margin: auto 0 0 0;
+    align-self: flex-start;
+    /* -> 자기 자신에다가만 코드 재적용? */
+}
+
+.content figure:hover .cover {
+    inset: 0 auto auto 0;
+}
+
+.customer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.customer .list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background: #fff;
+    margin: 0 0 10px 0;
+}
+
+/* <박스에 커서 올렸을때 테두리 스토로커 만들기> */
+.customer .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 1px solid #0c4ca3;
+    border-left: 1px solid #0c4ca3;
+
+    visibility: hidden;
+    transition: 0.5s;
+    /* -> 숨기다 */
+}
+
+.customer .list:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    /* -> 노출되다 */
+}
+
+.customer .list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-bottom: 1px solid #0c4ca3;
+    border-right: 1px solid #0c4ca3;
+
+    visibility: hidden;
+}
+
+.customer .list:hover::after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    /* -> 노출되다 */
+
+    transition: 0.5s;
+    /* <박스에 커서 올렸을때 테두리 스토로커 만들기><<<<끝>>>>>>> */
+}
+
+.customer .list h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.customer .nav {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px;
+    height: 100px;
+    margin: 0 auto 50px auto;
+}
+
+.customer .nav>li {
+    flex: 1;
+}
+
+.customer .nav>li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #0c4ca3;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.customer .nav>li:hover::after {
+    width: 100%;
+}
+
+/* <요소를 가운데 오게하는 옛날 방식> */
+.customer .nav>li a {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.customer .nav>li~li {
+    border-left: 1px solid #ddd;
+}

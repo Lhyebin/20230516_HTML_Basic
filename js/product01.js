@@ -11,6 +11,7 @@ $(function () {
                 }
             }
         ]
+        // -> responsive : 반응형 (화면 줄어들때 2개만 보이게)
     });
 
     $('#product .arrows .left').on('click', function () {

@@ -33,11 +33,19 @@ body {
 .wrap {}
 
 #header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
     border-bottom: 1px solid #ddd;
 }
 
 #header .inner {
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0 50px;
     /* align-items: center; */
     height: 100px;
     line-height: 100px;
@@ -48,18 +56,24 @@ body {
     /* -> 글자만 아닌 약간의 주변까지 커서 올렸을때 아이콘 바뀌는 */
 }
 
-#header .gnb {
-    margin: 0 0 0 auto;
-}
-
 #header .gnb>ul {
     display: flex;
     gap: 40px;
 }
 
-#header .service {
-    margin: 0 0 0 50px;
+#header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
+
+
+
+
+
 
 #main_visual {
     position: relative;

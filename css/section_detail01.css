@@ -14,6 +14,8 @@ body {
 }
 
 .sec .tit {
+    width: 1200px;
+    padding: 0 15px;
     margin: 0 auto 30px auto;
 }
 
@@ -89,6 +91,102 @@ body {
     font-size: 15px;
     text-shadow: 0 0 3px #000;
 }
+
+
+
+
+
+
+
+
+
+#detail01 .content {
+    display: flex;
+    gap: 1px;
+}
+
+#detail01 .content>* {
+    position: relative;
+    flex: 1;
+    padding: 50px 30px;
+    height: 500px;
+    transition: 0.5s;
+
+    overflow: hidden;
+}
+
+#detail01 .content>*::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+#detail01 .content>*.on::before {
+    background: rgba(0, 0, 0, 0);
+}
+
+#detail01 .content>*.on {
+    flex: 3;
+}
+
+#detail01 .content .txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid tomato;
+    color: #fff;
+}
+
+#detail01 .content .txt h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #fff;
+}
+
+#detail01 .content>* .txt p {
+    width: 400px;
+    opacity: 0;
+}
+
+#detail01 .content>*.on .txt p {
+    opacity: 1;
+}
+
+#detail01 .content .txt a {
+    margin: auto 0 0 0;
+    background: #444;
+    padding: 10px 25px;
+    align-self: flex-start;
+}
+
+#detail01 .content .itm01 {
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+#detail01 .content .itm02 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+#detail01 .content .itm03 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+#detail01 .content .itm04 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+
+
+
+
+
+
+
 
 
 

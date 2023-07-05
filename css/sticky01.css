@@ -4,13 +4,8 @@
     padding: 0 15px;
 }
 
-
 .sec {
     padding: 100px 0;
-}
-
-body {
-    min-height: 150vh;
 }
 
 .sec .tit {
@@ -26,13 +21,23 @@ body {
 .sec .tit p {
     font-size: 15px;
     word-break: keep-all;
-    /* 낱말에 줄바꿈 해주기 */
     line-height: 19px;
 }
 
-.wrap {}
+body {
+    min-height: 150vh;
+}
+
+.wrap {
+    /* overflow 있으면 sticky 작동안함. */
+    /* overflow-x: hidden; */
+}
 
 #header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
     border-bottom: 1px solid #ddd;
 }
 
@@ -45,7 +50,6 @@ body {
 
 #header a {
     display: block;
-    /* -> 글자만 아닌 약간의 주변까지 커서 올렸을때 아이콘 바뀌는 */
 }
 
 #header .gnb {
@@ -91,6 +95,36 @@ body {
 }
 
 
+#sticky .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+#sticky .inner .left {
+    position: sticky;
+    top: 200px;
+    border: 1px solid tomato;
+}
+
+
+#sticky2 .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+#sticky2 .inner .left {
+    position: sticky;
+    top: 200px;
+    border: 1px solid tomato;
+}
+
+
+
+
+
+
 
 
 #footer {
@@ -99,7 +133,6 @@ body {
     color: #fff;
     text-align: center;
 }
-
 
 
 
